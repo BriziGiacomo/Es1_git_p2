@@ -1,0 +1,4 @@
+Differenze tra working tree, staging area e repository:
+- la working tree è la zona di lavoro attuale, nella quale è presente la versione "modificata" del progetto, avente le modifiche a cui si sta lavorando in quel preciso istante;
+- la staging area è un'area di transito tra la working tree e la repos, serve a rappresentare la memoria locale del progetto;
+- la repository è il database locale di git, in cui vengono salvate in modo permanente tutte le modifiche, la cronologia e i commit del progetto.
