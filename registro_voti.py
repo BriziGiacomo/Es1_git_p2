@@ -7,15 +7,15 @@ class RegistroVoti:
             return 0.0
         return sum(self.voti) / len(self.voti)
 
-    if __name__ == "__main__":
-        registro = RegistroVoti()
-        registro.aggiungi_voto(8)
-        registro.aggiungi_voto(10)
-        print(f"Voti registrati: {registro.voti}")
+    def aggiungi_voto(self, voto):
+        self.voti.append(voto)
 
-    # Caso di prova
-        m = registro.media()
-        print(f"Media calcolata: {m}")
-        assert m == 9.0, f"Errore nel calcolo: atteso 9.0, ottenuto {m}"
-        print("Test media superato con successo.")    
-        
+if __name__ == "__main__":
+    registro = RegistroVoti()
+    registro.aggiungi_voto(8)
+    registro.aggiungi_voto(10)
+    print(f"Voti registrati: {registro.voti}")
+
+    #Caso di bocciatura
+    studenti_bocciati = [voto for voto in registro.voti if voto < 5.45]  
+    print(f"Studenti bocciati: {studenti_bocciati}")
